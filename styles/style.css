@@ -119,16 +119,15 @@ ol {
   display: flex;
   gap: 5px;
   width: fit-content;
+  cursor: pointer;
 }
 
 .search-form__pseudo-checkbox {
   width: 19px;
   height: 19px;
   border: 1px solid #ffffff;
-  cursor: pointer;
-}
-
-.search-form__label-text {
+  display: flex;
+  justify-content: center;
 }
 
 .search-form__fieldset-title {
@@ -236,4 +235,44 @@ ol {
   width: 194px;
   margin-top: 20px;
   gap: 10px;
+}
+
+.search-form__checkbox:checked + .search-form__pseudo-checkbox::after {
+  content: "";
+  height: 15px;
+  width: 15px;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-self: center;
+}
+
+.search-form__textfield:focus {
+  outline: none;
+}
+
+.search-form__label:has(:focus-visible) {
+  outline: 1px solid #ffffff;
+  outline-offset: 2px;
+}
+
+.search-form__checkbox-list .search-form__label:hover {
+  text-decoration: underline 1px solid;
+}
+
+.button:focus {
+  outline: none;
+}
+
+.button:focus-visible {
+  outline: 1px solid #ffffff;
+  outline-offset: 2px;
+}
+
+.button:hover {
+  text-decoration: underline 1px solid;
+}
+
+.button:active {
+  background-color: #545050;
 }
